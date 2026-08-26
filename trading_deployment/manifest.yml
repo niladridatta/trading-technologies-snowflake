@@ -1,0 +1,24 @@
+manifest_version: 2
+type: DCM_PROJECT
+
+default_target: DEV
+
+targets:
+  DEV:
+    # TODO: Replace with the fully qualified name of your DEV project object
+    account_identifier: DJIYULH-EX24363
+    project_name: SNOWFLAKE_MY_DB.MY_SCHEMA.MY_PROJECT_OBJECT1
+    project_owner: MY_ROLE
+    templating_config: DEV
+
+templating:
+  defaults:
+    project_owner_role: "MY_ROLE"
+    wh_size: "SMALL"
+  configurations:
+    DEV:
+      env_suffix: "_MY_PROJECT_OBJECT"
+      teams:
+        - name: "SAMPLE_TEAM"
+          data_retention_days: 1
+          add_employees: TRUE
